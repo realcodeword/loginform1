@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar flex">
+        <div class="logo"> CodeWord </div>
+        <ul class="flex">
+            <li> <a href="#"> Home </a></li>
+            <li> <a href="#"> Product </a></li>
+            <li> <a href="#"> Contact </a></li>
+            <li> <a onclick="loginToggle()" id="login-btn"> Login </a></li>
+        </ul>
+    </div>
+
+
+    <div id="login" class="login-container flex">
+        <form class="flex">
+            <div class="cancel-btn" onclick="loginCancelToggle()">
+                <img src="img/cancel.png">
+            </div>
+            <input type="text" placeholder="email" required>
+            <input type="password" placeholder="password" required>
+            <input type="submit" value="Submit" id="submit-btn">
+            <p> Don't Have An Account </p> <a onclick="signupToggle()" id="signup-btn">Register Here</a>
+        </form>
+    </div>
+
+
+    <div id="signup" class="signup-container flex">
+        <form class="flex">
+            <div class="cancel-btn" onclick="signupCancelToggle()">
+                <img src="img/cancel.png">
+            </div>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Country" required>
+            <input type="email" placeholder="Email" required>
+            <div class="gender flex">
+                <div class="male flex"><input type="radio" name="gender" required> Male</div>
+                <div class="female flex"> <input type="radio" name="gender" required> Female</div>
+                <div class="trans flex">
+                    <input type="radio" name="gender" required> Trans
+                </div>
+            </div>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <div class="term flex">
+                <input type="checkbox" name="term" required>
+                <a href=""> accept term & conditions </a>
+            </div>
+            <input type="submit" value="Submit" id="submit-btn">
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

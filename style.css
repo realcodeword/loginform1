@@ -1,0 +1,163 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.flex{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    background:url("img/bg.jpg");
+    background-size:cover;
+    background-position:center
+}
+
+.navbar{
+    height:50px;
+    width:100%;
+    background:rgba(0, 0, 0, 0.317);
+    justify-content: space-between;
+    backdrop-filter:blur(2px);
+}
+
+.logo{
+    color:white;
+    font-size: 25px;
+    margin-left:20px;
+    font-weight: bold;
+}
+
+ul{
+    margin-right:20px;
+    gap:20px;
+    list-style:none;
+}
+
+ul li a{
+    color:wheat;
+    text-decoration:none;
+    font-size: 18px;
+}
+
+/*  Login  */
+.login-container,.signup-container{
+    height:calc(100vh - 50px);
+    width:100%;
+}
+
+.login-container > form, .signup-container > form{
+    height:300px;
+    width:300px;
+    box-shadow:0 0 50px rgba(255, 255, 255, 0.284);
+    backdrop-filter:blur(2px);
+    flex-direction: column;
+}
+.login-container > form input,.signup-container > form input{
+    padding:0 5px;
+    margin:5px 0;
+    height:50px;
+    width:90%;
+    outline:none;
+    background:transparent;
+    border:0;
+    border-bottom:2px solid rgb(167, 167, 167);
+    color:white;
+    font-size: 17px;
+}
+.login-container > form input:hover,.signup-container > form input:hover{
+background:rgba(255, 255, 255, 0.345);
+border-radius:5px;
+border:0;
+}
+
+.login-container > form input::placeholder,.signup-container > form input::placeholder{
+color:rgb(176, 176, 176);
+}
+
+#submit-btn{
+    border:0;
+    background: rgb(0, 16, 4);
+    border-radius:50px;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    margin:20px 0;
+    height:40px;
+    cursor: pointer;
+}
+
+#login-btn,#signup-btn{
+    cursor: pointer;
+}
+#signup-btn{
+    color:rgb(0, 0, 170);
+    font-size: 18px;;
+}
+
+
+/*  Register Accounts  */
+.signup-container > form{
+    height:380px;
+    backdrop-filter:blur(5px);
+}
+.signup-container > form input{
+    height:30px;
+    font-size: 16px;;
+}
+
+.gender{
+    gap:20px;
+    font-size: 20px;
+    color:white;
+}
+
+
+.gender input[type="radio"]{
+    height:17px;
+    width:17px;
+    cursor: pointer;
+}
+
+.term{
+    width:100%;
+    gap:5px;
+}
+.term input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    cursor: pointer;
+}
+.term a{
+    color:rgb(0, 0, 73);
+    transition:.3s;
+}
+.term a:hover{
+    color:rgb(0, 0, 61);
+    transition:.3s;
+}
+
+#signup #submit-btn{
+    margin-bottom:0;
+}
+
+form{
+    position: relative;
+}
+form .cancel-btn{
+    position: absolute;
+    right:10px;
+    top:10px;
+}
+form .cancel-btn img{
+    height:25px;
+    cursor: pointer;
+}
+form .cancel-btn img:hover{
+    opacity: .8;
+}
